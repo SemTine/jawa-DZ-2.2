@@ -1,17 +1,18 @@
 public class Main {
     public static void main(String[] args) {
-        int balans = 111;
-        int price = 999;
-        int replenishment = (balans + price);
+        int balans = 100;
+        int replenishment = 1000;
 
-        if (price > 1000) {
-            int bonus = price / 100 * 1;
-            System.out.println(replenishment + " рублей теберь на балансе ");
-            System.out.println("Плюс " + bonus + " бонусных рублей ");
+        if (replenishment >= 1000) {
+            int bonus = replenishment / 100;
+            int price = replenishment + bonus + balans;
+
+            System.out.println("Вы пополненли от 1000 и мы вам начисленли " + bonus + " бонусных рублей , и теперь ваш баланс " + price);
 
 
         } else {
-            System.out.println(replenishment + " на балансе");
+            int result = balans + replenishment;
+            System.out.println(result + " на балансе");
         }
 
 
